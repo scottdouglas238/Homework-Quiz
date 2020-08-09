@@ -3,8 +3,12 @@ var startQuizButton = document.querySelector("#startButton");
 var questionPrompt = document.querySelector("#questionPrompt");
 var correct1 = document.querySelector("#correctAnswer1");
 var incorrect1 = document.getElementsByClassName("btn-primary1");
-var nextQuestion = document.querySelector("#nextQuestion");
+var nextQuestion = document.querySelector("#nextQuestion");// this may not do anything
 var nextQuestionBtn = document.querySelector("#nextQuestionBtn1");
+var correct2 = document.querySelector("#correctAnswer2");
+var incorrect2 = document.getElementsByClassName("btn-primary2");
+var nextQuestionBtn2 = document.querySelector("#nextQuestionBtn2");
+
 
 var questions = [
     // object to store questions and answers
@@ -58,14 +62,6 @@ document.getElementById("startButton").addEventListener("click", function () {
 
 startQuizButton.addEventListener("click", function startButton() {
     startQuizPrompt.style.display = "none";
-    //this function hides the start button and displays the questions
-    // var x = document.getElementById("startQuizPrompt");
-    // if (x.style.display === "none") {
-    //     x.style.display = "block";
-    // } else {
-    //     x.style.display = "none";
-    // }
-    //in here is where I can create an event where the new questions appear
     questionPrompt.style.display = "block";
     
 });
@@ -74,10 +70,6 @@ correct1.addEventListener("click", function correct1() {
     correctOne.style.display = "block";
     nextQuestion.style.display = "block";
 });
-
-// incorrect1.addEventListener("click", function incorrect1() {
-    //     incorrectOne.style.display = "block";
-    // });
     
     for (var i = 0; i < incorrect1.length; i++){
     incorrect1[i].addEventListener("click", function() {
@@ -88,4 +80,20 @@ correct1.addEventListener("click", function correct1() {
 
 nextQuestionBtn.addEventListener("click", function nextQuestion() {
     questionPrompt.style.display = "none";
+    nextQuestionBtn1.style.display = "none";
+    questionPrompt2.style.display = "block";
 });
+
+
+correct2.addEventListener("click", function correct2 (){
+    correctTwo.style.display = "block";
+    nextQuestion2.style.display = "block";
+});
+
+for (var i = 0; i < incorrect2.length; i++){
+    incorrect2[i].addEventListener("click", function() {
+        incorrectTwo.style.display = "block";
+        nextQuestion.style.display = "block";
+        nextQuestion2.style.display = "block";
+    })
+}
