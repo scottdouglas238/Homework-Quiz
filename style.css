@@ -18,4 +18,7 @@ button {
     color: green;
     font-size: 50px;
 }
-
+#incorrectOne {
+    color: red;
+    font-size: 50px;
+}

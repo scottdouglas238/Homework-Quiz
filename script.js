@@ -2,7 +2,7 @@
 var startQuizButton = document.querySelector("#startButton");
 var questionPrompt = document.querySelector("#question-prompt");
 var correct1 = document.querySelector("#correctAnswer1");
-var incorrect1 = document.querySelectorAll(".btn-primary1");
+var incorrect1 = document.getElementsByClassName("btn-primary1")
 
 var questions = [
     // object to store questions and answers
@@ -68,16 +68,14 @@ startQuizButton.addEventListener("click", function startButton() {
 
 correct1.addEventListener("click", function correct1() {
     correctOne.style.display = "block";
-
 });
 
-incorrect1.addEventListener("click", function incorrect1() {
-    var i; 
-    for (i = 0; i < incorrect1.length; i++)
-    {
-        incorrect1[i].style.display = "block";
-    }
-    // incorrectOne.style.display = "block";
+// incorrect1.addEventListener("click", function incorrect1() {
+//     incorrectOne.style.display = "block";
+// });
 
-});
-
+for (var i = 0; i < incorrect1.length; i++){
+    incorrect1[i].addEventListener("click", function() {
+        incorrectOne.style.display = "block";
+    })
+}
