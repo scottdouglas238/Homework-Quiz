@@ -30,3 +30,19 @@ button {
     color: red;
     font-size: 50px;
 }
+#correctThree {
+    color: green;
+    font-size: 50px;
+}
+#incorrectThree {
+    color: red;
+    font-size: 50px;
+}
+#correctFour {
+    color: green;
+    font-size: 50px;
+}
+#incorrectFour {
+    color: red;
+    font-size: 50px;
+}

@@ -8,39 +8,47 @@ var nextQuestionBtn = document.querySelector("#nextQuestionBtn1");
 var correct2 = document.querySelector("#correctAnswer2");
 var incorrect2 = document.getElementsByClassName("btn-primary2");
 var nextQuestionBtn2 = document.querySelector("#nextQuestionBtn2");
+var correct3 = document.querySelector("#correctAnswer3");
+var incorrect3 = document.getElementsByClassName("btn-primary3");
+var nextQuestionBtn3 = document.querySelector("#nextQuestionBtn3");
+var correct4 = document.querySelector("#correctAnswer4");
+var incorrect4 = document.getElementsByClassName("btn-primary4");
 
 
-var questions = [
-    // object to store questions and answers
-    {
-        text: "What is the name of Frodo's sword?",
-        options: ["Sting", "Boromire", "The Nazgul", "Denethor"],
-    },
-    //how to make sting appear as the correct answer
-    {
-        text: "Who created the One Ring?",
-        options: ["Boromire", "Geralt of Rivia", "Goku", "Sauron"],
-    },
-    {
-        text:
-            "Who is the strongest charater in the trilogy? (Not subjective at all)",
-        options: ["Frodo", "Aragorn", "Legolas", "Samwise the brave"],
-    },
-    {
-        text:
-            "What is the name of the city where the battle for Middle Earth took place?",
-        options: ["Rohan", "The Shire", "Minas Tirith", "Mordor"],
-    },
-];
 
-var correctAnswer1 = questions[0].options[0]; // variables to store the answers to questions
-var correctAnswer2 = questions[1].options[3];
-var correctAnswer3 = questions[2].options[3];
-var correctAnswer4 = questions[3].options[2];
-console.log(correctAnswer1);
-console.log(correctAnswer2);
-console.log(correctAnswer3);
-console.log(correctAnswer4);
+
+
+// var questions = [
+//     // object to store questions and answers
+//     {
+//         text: "What is the name of Frodo's sword?",
+//         options: ["Sting", "Boromire", "The Nazgul", "Denethor"],
+//     },
+//     //how to make sting appear as the correct answer
+//     {
+//         text: "Who created the One Ring?",
+//         options: ["Boromire", "Geralt of Rivia", "Goku", "Sauron"],
+//     },
+//     {
+//         text:
+//             "Who is the strongest charater in the trilogy? (Not subjective at all)",
+//         options: ["Frodo", "Aragorn", "Legolas", "Samwise the brave"],
+//     },
+//     {
+//         text:
+//             "What is the name of the city where the battle for Middle Earth took place?",
+//         options: ["Rohan", "The Shire", "Minas Tirith", "Mordor"],
+//     },
+// ];
+
+// var correctAnswer1 = questions[0].options[0]; // variables to store the answers to questions
+// var correctAnswer2 = questions[1].options[3];
+// var correctAnswer3 = questions[2].options[3];
+// var correctAnswer4 = questions[3].options[2];
+// console.log(correctAnswer1);
+// console.log(correctAnswer2);
+// console.log(correctAnswer3);
+// console.log(correctAnswer4);
 
 document.getElementById("startButton").addEventListener("click", function () {
     const startingMinutes = 2;
@@ -95,5 +103,41 @@ for (var i = 0; i < incorrect2.length; i++){
         incorrectTwo.style.display = "block";
         nextQuestion.style.display = "block";
         nextQuestion2.style.display = "block";
+    })
+}
+
+nextQuestionBtn2.addEventListener("click", function(){
+    nextQuestion2.style.display = "none";
+    questionPrompt2.style.display = "none";
+    questionPrompt3.style.display = "block";
+})
+
+correct3.addEventListener("click", function correct3 (){
+    correctThree.style.display = "block";
+    nextQuestion3.style.display = "block";
+});
+
+for (var i = 0; i < incorrect3.length; i++){
+    incorrect3[i].addEventListener("click", function() {
+        incorrectThree.style.display = "block";
+        nextQuestion3.style.display = "block";
+    })
+}
+
+nextQuestionBtn3.addEventListener("click", function(){
+    questionPrompt3.style.display = "none";
+    nextQuestionBtn3.style.display = "none";
+    questionPrompt4.style.display = "block";
+})
+
+correct4.addEventListener("click", function correct4 (){
+    correctFour.style.display = "block";
+    nextQuestion4.style.display = "block";
+});
+
+for (var i = 0; i < incorrect4.length; i++){
+    incorrect4[i].addEventListener("click", function() {
+        incorrectFour.style.display = "block";
+        nextQuestion4.style.display = "block";
     })
 }
