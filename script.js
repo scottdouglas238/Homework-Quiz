@@ -174,14 +174,18 @@ const addWinnerName = ()=>{
 
   console.warn("added" , winnerNames );
   let p = document.querySelector("#msg p");
-  p.textContent = JSON.stringify(winnerNames);
+  p.textContent = document.getElementById("enterName1").value + " count: " + count;
 
   //saving to localStorage
   localStorage.setItem("theWinnerList", JSON.stringify(winnerNames) );
 }
 
-document.addEventListener("DOMContentLoaded" , ()=>{
-  document.getElementById("highScoreButton").addEventListener("click", addWinnerName);
+var winnerNames_deserialized = JSON.parse(localStorage.getItem("winnerName"));
+
+document.addEventListener("DOMContentLoaded" , ()=>{//fat arrow function
+  document.getElementById("highScoreButton").addEventListener("click", function(){
+    addWinnerName() 
+  });
 });
     
 
