@@ -53,3 +53,7 @@ button {
     background-color: darkgray;
     font-size: 30px;
 }
+#msg {
+    font-size: 24px;
+    color: blue;
+}

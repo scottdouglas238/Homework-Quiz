@@ -30,12 +30,12 @@ startQuizButton.addEventListener("click", function () {
     count -= 1;
     timerText.textContent = count;
     timerText2.textContent = "Your final score is " + count;
-    if (count < 0){
+    if (count < 0) {
       alert("Game over!");
       return;
     }
   }, 1000);
-  
+
   for (var i = 0; i < incorrect1.length; i++) {
     //displays incorrect if user clicks anything other than correct answer and a next question button
     incorrect1[i].addEventListener("click", function () {
@@ -164,18 +164,40 @@ for (var i = 0; i < incorrect4.length; i++) {
   });
 }
 
+let winnerNames = [];
 
-highScoreButton.addEventListener("click", function store(){
-  for (let i = 0; i < 10; i++) {
-    const key = enterNameHere.value[i];
-    localStorage.setItem("name1", key);
-  }
+const addWinnerName = ()=>{
+  let winnerName = {
+    High_Score_Winner: document.getElementById("enterName1").value,
+  };
+  winnerNames.push(winnerName);
+
+  console.warn("added" , winnerNames );
+  let p = document.querySelector("#msg p");
+  p.textContent = JSON.stringify(winnerNames);
+
+  //saving to localStorage
+  localStorage.setItem("theWinnerList", JSON.stringify(winnerNames) );
+}
+
+document.addEventListener("DOMContentLoaded" , ()=>{
+  document.getElementById("highScoreButton").addEventListener("click", addWinnerName);
 });
-// highScoreButton.addEventListener("click", function store(){
-//      const key = enterNameHere.value;
-//      localStorage.setItem("name1", key);
-//     });
+    
 
+
+// highScoreButton.addEventListener("click", function store() {
+//   const key = enterNameHere.value;
+//   localStorage.setItem("name1", key);
+  
+// });
+
+// highScoreButton.addEventListener("click", function store(){
+//   for (let i = 0; i < 10; i++) {
+//     const key = enterNameHere.value[i];
+//     localStorage.setItem("name1", key);
+//   }
+// });
 
 //QUIZ ENDS HERE --------------------------------------------------------------------------------
 
