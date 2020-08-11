@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <p id= "countdown">2:00</p>
+    <p id= "countdown">120</p>
  <div class = "container">
   <div class = "row">
    <div id = "startQuizPrompt" class = "col">
@@ -72,21 +72,29 @@
       </div>
       <div id = "questionPrompt4" style = "display: none;">
         <h2 id = "question4">What is the name of the city where the battle for Middle Earth took place?</h2>
-         <div class = "questions">
-          <button id = "4wrongAnswer1" class = "btn btn-primary4">Rohan</button>
-          <button id = "4wrongAnswer2" class = "btn btn-primary4">The Shire</button>
-          <button id = "correctAnswer4" class = "btn btn-primary">Minas Tirith</button>
-          <button id = "4wrongAnswer3" class = "btn btn-primary4">Mordor</button>
-           <div id = "correctFour" style = "display: none;">
-            <p>Correct!</p>
-             </div>
-             <div id = "incorrectFour" style = "display: none;">
-              <p>Incorrect!</p>
-             </div>
-         </div>
-       </div>
-       <div id = "nextQuestion4" style = "display: none;">
-          <button id = "nextQuestionBtn4">Next Question!</button>
+        <div class = "questions">
+            <button id = "4wrongAnswer1" class = "btn btn-primary4">Rohan</button>
+            <button id = "4wrongAnswer2" class = "btn btn-primary4">The Shire</button>
+            <button id = "correctAnswer4" class = "btn btn-primary">Minas Tirith</button>
+            <button id = "4wrongAnswer3" class = "btn btn-primary4">Mordor</button>
+            <div id = "correctFour" style = "display: none;">
+                <p>Correct!</p>
+            </div>
+            <div id = "incorrectFour" style = "display: none;">
+                <p>Incorrect!</p>
+            </div>
+        </div>
+    </div>
+    <form id ="enterName" style = "display: none;">
+        <label for="name">Please enter your name:</label>
+        <input type="text" id="enterName1">
+        <button type="button" id="highScoreButton">Your Name Here</button>
+    </form>
+    <div class = "gameOverScreen" style = "display: none">
+        <p>Your final score is " "</p>
+    </div>
+       <div id = "endOfQuiz" style = "display: none;">
+          <button id = "endOfQuizBtn">Finish Quiz</button>
       </div>
 </div>
  </div>

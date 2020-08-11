@@ -14,7 +14,7 @@ button {
     margin-left: 700px;
     font-size: 24px;
 }
-#correctOne {
+#correctOne {  
     color: green;
     font-size: 50px;
 }
@@ -45,4 +45,11 @@ button {
 #incorrectFour {
     color: red;
     font-size: 50px;
+}
+
+.gameOverScreen {
+    height: 300px;
+    width: 300px;
+    background-color: darkgray;
+    font-size: 30px;
 }
