@@ -164,7 +164,7 @@ for (var i = 0; i < incorrect4.length; i++) {
   });
 }
 
-let winnerNames = [];
+let winnerNames = [];//if exists use as value, if not set as empty array
 
 const addWinnerName = ()=>{
   let winnerName = {
@@ -174,8 +174,8 @@ const addWinnerName = ()=>{
 
   console.warn("added" , winnerNames );
   let p = document.querySelector("#msg p");
-  p.textContent = document.getElementById("enterName1").value + " count: " + count;
-
+  p.textContent = document.getElementById("enterName1").value + " ;count: " + count;
+  
   //saving to localStorage
   localStorage.setItem("theWinnerList", JSON.stringify(winnerNames) );
 }
